@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: lightgoldenrodyellow;
+
+}
+
+.container{
+    background-color: white;
+    border-radius: 10%;
+    padding: 5rem;
+    box-shadow:4px 4px 4px 4px blue;
+    max-width: 400px;
+    
+}
+
+form{
+    margin-top: 1rem;
+}
+
+h1{
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: greenyellow;
+
+}
+
+p{
+    font-size: 16px;
+    color: chocolate;
+
+}
+
+label{
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    color: black;
+
+}
+
+input{
+    padding: 10px;
+    font-size: 16px;
+    border: 1px dotted greenyellow;
+    border-radius: 20px;
+    transition: border-colour 3s ease-in-out;
+}
+
+input:focus{
+    outline: none;
+    border-color: red;
+
+}
+
+#convertedweight{
+    font-size: 20px;
+    font-weight: 500;
+    color: red;
+    display: inline-block;
+}
+
+.Error {
+    border: 2px solid red; /* Red border to indicate an error */
+    background-color: #ffe6e6; /* Light red background for emphasis */
+}
