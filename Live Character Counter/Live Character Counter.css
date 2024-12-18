@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: aqua;
+    font-family: cursive;
+}
+
+.container{
+    width: 400px;
+    padding: 40px;
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px black;
+    border-radius: 12px;
+    color: blue;
+
+}
+
+.container h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: blue;
+}
+
+.container textarea{
+    position: relative;
+    margin-bottom: 20px;
+    resize: none;
+    height: 200px;
+    width: 100%;
+    padding: 10px;
+    background-color: beige;
+    border: 2px solid red;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: blue;
+}
+
+.container textarea::placeholder{
+    color: purple
+}
+
+.container p{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: cadetblue;
+}
+
+.container p .Counter{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-left: 10px;
+    color: black;
+}
+
+.container p .wospace{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-left: 10px;
+    color: black;
+}

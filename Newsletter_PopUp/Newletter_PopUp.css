@@ -1,0 +1,209 @@
+/* Applies to all elements on the page. 
+   box-sizing: border-box ensures that padding and borders are included in the element's width and height.
+   padding: 0 and margin: 0 remove default spacing around elements for a clean layout. */
+   * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styles for the <body> tag. 
+   display: flex enables the use of Flexbox for layout. 
+   align-items: center centers content vertically. 
+   justify-content: center centers content horizontally.
+   font-family specifies the font used for text.
+   height: 100vh makes the body take up the full height of the viewport.
+   background-color sets the page's background to a bright green (chartreuse). */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    height: 100vh;
+    background-color: chartreuse;
+}
+
+/* Styles for elements with the "button" class.
+   position: relative allows positioning relative to its normal layout.
+   padding adds space inside the button for better aesthetics.
+   font-size sets the size of the button text.
+   background-color sets the button's background to blue.
+   display: inline-block ensures the button fits tightly around its content.
+   text-decoration: none removes the underline for links styled as buttons.
+   color sets the text color to a light blue (aliceblue).
+   cursor: pointer changes the cursor to a pointer when hovering over the button.
+   border-radius rounds the corners of the button for a smoother look.
+   transition specifies a short animation duration for hover effects. */
+.button {
+    position: relative;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    background-color: blue;
+    display: inline-block;
+    text-decoration: none;
+    color: aliceblue;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 3ms;
+}
+
+/* Adds a hover effect for the "button" class. 
+   letter-spacing increases the spacing between letters slightly when the button is hovered over. */
+.button:hover {
+    letter-spacing: 0.1rem;
+}
+
+/* Styles for the newsletter popup.
+   position: fixed places the popup relative to the viewport, so it stays in the same place during scrolling.
+   top: -100% initially places the popup off-screen.
+   left: 50% centers the popup horizontally.
+   transform translates the popup to ensure it aligns properly with the center.
+   background-color sets the popup background to yellow.
+   z-index: 1000 ensures the popup appears above other elements.
+   width sets the popup's width to 450px.
+   padding adds internal spacing to the popup content.
+   transition defines the animation duration for position changes.
+   border-radius rounds the popup's corners.
+   visibility: hidden ensures the popup is hidden initially. */
+#newsletter {
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: yellow;
+    z-index: 1000;
+    width: 450px;
+    padding: 80px 50px 50px;
+    transition: 10ms;
+    border-radius: 4px;
+    visibility: hidden;
+}
+
+/* Adds styles when the newsletter popup is active.
+   visibility: visible makes the popup visible.
+   top: 50% moves the popup to the center of the screen. */
+#newsletter.active {
+    visibility: visible;
+    top: 50%;
+}
+
+/* Styles for the <h2> tag inside the newsletter popup.
+   text-align centers the text.
+   color sets the text color to red.
+   font-size sets the size of the text.
+   margin adds space around the heading. */
+#newsletter h2 {
+    text-align: center;
+    color: red;
+    font-size: 24px;
+    margin: 20px 10px;
+}
+
+/* Styles for the <p> tag inside the newsletter popup.
+   Similar to the <h2> styles but with purple text color. */
+#newsletter p {
+    text-align: center;
+    color: purple;
+    font-size: 24px;
+    margin: 20px 10px;
+}
+
+/* Styles for elements with the "box" class inside the newsletter.
+   position: relative allows for positioning adjustments.
+   width: auto ensures the width adjusts to fit content.
+   margin-top adds space above the box.
+   display: flex enables Flexbox for alignment.
+   align-items: center vertically aligns content within the box.
+   justify-content: center horizontally centers content within the box. */
+#newsletter .box {
+    position: relative;
+    width: auto;
+    margin-top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Shared styles for input fields and buttons.
+   width: 100% ensures the element takes up the full width of its container.
+   border adds a blue border around the element.
+   padding adds internal spacing for a better look.
+   outline: none removes the default focus outline.
+   font-size and font-family define the text style. */
+input, button {
+    width: 100%;
+    border: 1px solid blue;
+    padding: 15px;
+    outline: none;
+    font-size: 1rem;
+    font-family: serif;
+}
+
+/* Additional styles for buttons.
+   border: none removes the border.
+   width sets a specific width for the button.
+   letter-spacing increases the spacing between letters slightly.
+   background-color sets the button's background to crimson (dark red).
+   color sets the text color to white.
+   border-radius creates fully rounded corners.
+   cursor: pointer changes the cursor to a pointer when hovering over the button. */
+button {
+    border: none;
+    width: 150px;
+    letter-spacing: 0.1rem;
+    background-color: crimson;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* Styles for the close button in the newsletter.
+   position: absolute places the button relative to the nearest positioned ancestor.
+   cursor: pointer changes the cursor to a pointer when hovering over the button.
+   top and right position the button in the top-right corner of the popup. */
+.close {
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 20px;
+}
+
+/* Similar styles as the newsletter for the <h3> tag in the "in-process" popup. */
+#inprocess h3 {
+    text-align: center;
+    color: red;
+    font-size: 24px;
+    margin: 20px 10px;
+}
+
+/* Similar styles as the newsletter for the <p> tag in the "in-process" popup. */
+#inprocess p {
+    text-align: center;
+    color: indigo;
+    font-size: 20px;
+    margin: 20px 10px;
+}
+
+/* Styles for the "in-process" popup.
+   Similar to the newsletter styles but with unique positioning. */
+#inprocess {
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-100%, -100%);
+    background-color: yellow;
+    z-index: 1000;
+    width: 450px;
+    padding: 80px 50px 50px;
+    transition: 10ms;
+    border-radius: 4px;
+    visibility: hidden;
+}
+
+/* Styles for the "in-process" popup when it is active.
+   Similar to the active styles for the newsletter popup. */
+#inprocess.active {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

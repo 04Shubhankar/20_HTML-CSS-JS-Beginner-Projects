@@ -1,0 +1,75 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: linear-gradient(top-right,green blue) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.card{
+    background: linear-gradient(to bottom, red black);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+
+}
+
+.heading, .counter-machine{
+    color: white;
+    margin: 0;
+
+}
+
+.counter{
+    background-color: blueviolet;
+    border-radius: 50%;
+    padding: auto;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    border: 4px solid transparent;
+    transition: border-colour 1s;
+}
+
+.btn-grp{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.btn-counter{
+    border-color: bisque;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    padding: 10px 10px;
+    transition: background-colour 1s;
+}
+
+.btn-counter:hover{
+    background-color: pink;
+}
+
+.positive{
+    border-color: green;
+}
+
+.negative{
+    border-color: red;
+}

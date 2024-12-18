@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Declares the document type as HTML5 -->
+  <!DOCTYPE html>
+
+  <!-- Specifies the language of the document as English -->
+  <html lang="en">
+
+  <!-- Metadata about the document -->
+  <head>
+
+    <!-- Sets the character encoding of the document to UTF-8. 
+         This ensures the document supports most languages and special characters. -->
+    <meta charset="UTF-8">
+
+    <!-- Sets the viewport to make the website responsive on different screen sizes. 
+         "width=device-width" makes the width of the viewport match the width of the device.
+         "initial-scale=1.0" sets the initial zoom level to 100%. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Sets the title of the web page. This title appears on the browser tab and is important for SEO. -->
+    <title>Newsletter PopUp</title>
+
+    <!-- Links an external CSS file for styling. 
+         The file 'Newletter_PopUp.css' contains all the custom styles for this web page. -->
+    <link rel="stylesheet" href="Newletter_PopUp.css">
+
+    <!-- Links the Font Awesome library for using icons. 
+         The URL points to a CDN (Content Delivery Network) for Font Awesome.
+         The integrity attribute ensures the file isn't tampered with.
+         crossorigin="anonymous" ensures the resource is loaded without authentication.
+         referrerpolicy="no-referrer" improves privacy by not sending referrer info. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+          integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <!-- The main content of the web page -->
+  <body>
+
+    <!-- A link styled to look like a button. 
+         "class='button'" is used to apply styles from the CSS file. 
+         "onclick='toggleNewsLetterwidgit()'" calls a JavaScript function to open the newsletter popup when clicked. -->
+    <a class="button" onclick="toggleNewsLetterwidgit()">Subscribe This</a>
+
+    <!-- This is the container for the newsletter popup. 
+         "id='newsletter'" uniquely identifies this element for JavaScript to manipulate it. 
+         "class='hidden'" initially hides the popup (style defined in CSS). -->
+    <div class="hidden" id="newsletter">
+
+      <!-- A heading for the newsletter popup. 
+           <h2> is used to define the second-largest heading on the page. -->
+      <h2>Join the Newsletter</h2>
+
+      <!-- A paragraph providing more details about the newsletter. 
+           <p> is used to add descriptive text. -->
+      <p>Also Check all other offering from us we are happy to have you onboard🚪</p>
+
+      <!-- This is a container for the email input field. 
+           "class='box'" applies specific styles from the CSS file to the container. -->
+      <div class="box">
+
+        <!-- Input field where the user can type their email address. 
+             "type='email'" ensures the input must be a valid email format. 
+             "placeholder='Enter email'" displays text inside the input field as a hint. -->
+        <input type="email" placeholder="Enter email">
+      </div>
+
+      <!-- This is another container for the signup button. 
+           The button allows users to submit their email. -->
+      <div class="box">
+
+        <!-- A button styled with CSS that triggers the inprocess() function when clicked. 
+             "type='submit'" indicates that this button submits a form (or acts like one). -->
+        <button type="submit" onclick="inprocess()">Signup</button>
+      </div>
+
+      <!-- A close button to hide the newsletter popup. 
+           Clicking this calls the toggleNewsLetterwidgit() function to close it. -->
+      <a class="close" onclick="toggleNewsLetterwidgit()">
+
+        <!-- Font Awesome icon used to represent the close (X) symbol. 
+             The class "fa fa-times fa-2x" adds a times icon and increases its size. -->
+        <i class="fa fa-times fa-2x"></i>
+      </a>
+    </div>
+
+    <!-- Linking the external JavaScript file that contains all the functionality for the web page. -->
+    <script src="Newletter_PopUp.js"></script>
+
+    <!-- This is another hidden container for a message shown when the user clicks "Signup". 
+         "id='inprocess'" uniquely identifies this div for JavaScript. 
+         "class='hidden'" ensures it is hidden initially using CSS. -->
+    <div class="hidden" id="inprocess">
+
+      <!-- A heading for the "in-process" popup message. -->
+      <h3>We will start taking entries soon😁</h3>
+
+      <!-- A paragraph explaining the current status of registrations. -->
+      <p>Currently we are in the process of accepting emails and registrations patience is the key🔑🔑</p>
+    </div>
+  </body>
+</html>

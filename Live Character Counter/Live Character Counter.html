@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Character Counter</title>
+    <link rel="stylesheet" href="Live Character Counter.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Live Character Counter</h2>
+        <textarea 
+            name="textarea" 
+            id="textarea"
+            cols="30"
+            rows="10"
+            placeholder="Enter Text Here"
+            onkeyup="countingcharactor()">     
+        </textarea>
+
+        <p>Total Character Typed including space : 
+            <span class="Counter">
+                0
+            </span>
+        </p>
+
+        <p>Total Character Typed Without  including space : 
+            <span class="wospace">
+                0
+            </span>
+        </p>
+    </div>
+
+
+    <script src="Live Character Counter.js"></script>
+    
+</body>
+</html>
