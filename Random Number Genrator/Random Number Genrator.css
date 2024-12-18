@@ -1,0 +1,69 @@
+body{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif;
+}
+
+.container{
+    text-align: center;
+    padding: 30px;
+    width: 400px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px black;
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.container:hover{
+    transform: scale(1.5);
+
+}
+
+h1{
+    color: indianred;
+    font-size: 25px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: chartreuse;
+    color: blue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-colour 0.3s;
+}
+
+button:hover{
+    background-color: yellow;
+}
+
+p{
+    font-size: 32px;
+    color: chocolate;
+    margin-top: 20px;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
