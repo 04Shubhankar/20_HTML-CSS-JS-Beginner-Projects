@@ -32,5 +32,5 @@ This repository contains 20 beginner-friendly web development projects built usi
 3. Open the project in your preferred code editor.
 
 **Learning Resources:**
-[JavaScript 20 Projects In 20 Days HTML, CSS & JavaScript](https://www.udemy.com/course/javascript-20-projects-in-20-days-html-css-javascript/?couponCode=ST21MT121624)]
+[JavaScript 20 Projects In 20 Days HTML, CSS & JavaScript](https://www.udemy.com/course/javascript-20-projects-in-20-days-html-css-javascript/?couponCode=ST21MT121624)
 
