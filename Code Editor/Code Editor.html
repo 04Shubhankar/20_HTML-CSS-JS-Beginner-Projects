@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Basic Code Editor</title>
+     <link rel="stylesheet" href="Code Editor.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+          integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+     <div class="container">
+          <div class="left">
+               <div class="box">
+                    <label for="html">HTML <i class="fa-brands fa-html5"></i></label>
+                    <textarea id="html" onkeyup="run()"></textarea>
+               </div>
+
+               <div class="box">
+                    <label for="css">CSS <i class="fa-brands fa-css3"></i></label>
+                    <textarea id="css" onkeyup="run()"></textarea>
+               </div>
+
+               <div class="box">
+                    <label for="js">JS <i class="fa-brands fa-js"></i></label>
+                    <textarea id="js" onkeyup="run()"></textarea>
+               </div>
+          </div>
+
+          <div class="right">
+               <label for="output">Output <i class="fa-solid fa-play"></i></label>
+               <iframe id="output"></iframe>
+          </div>
+     </div>
+
+     <script src="Code Editor.js"></script>
+</body>
+</html>
