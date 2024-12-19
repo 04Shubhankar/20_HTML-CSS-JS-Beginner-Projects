@@ -1,0 +1,35 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: auto;
+    background-color: aqua;
+    font-family: fantasy;
+
+}
+
+h1{
+    font-size: 3rem;
+    color: blue;
+    
+}
+
+#weekday{
+    font-size: 5rem;
+    color: crimson;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+#quote{
+    font-size: 2rem;
+    color: pink;
+}
+
