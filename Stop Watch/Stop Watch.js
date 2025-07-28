@@ -1,59 +1,54 @@
-window.onload = function(){
-  let sec = 0;
-  let mili = 0;
+let sec = 0;
+let mili = 0;
+let interval;
 
-  let interval;
-  const addsec = document.querySelector(".sec");
-  const addmili = document.querySelector(".mili");
+const secDisplay = document.querySelector(".sec");
+const miliDisplay = document.querySelector(".mili");
+const startBtn = document.querySelector(".start");
+const stopBtn = document.querySelector(".stop");
+const resetBtn = document.querySelector(".reset");
+const pauseHistoryList = document.getElementById("pauseHistory");
 
-  const start = document.querySelector(".start");
-  const stop = document.querySelector(".stop");
-  const reset = document.querySelector(".reset");
-
-  start.onclick = function(){
-    clearInterval(interval);
-    interval=setInterval(starttimer,1);
-
-
-
-  }
-
-  stop.onclick = function(){
-    clearInterval(interval);
-  }
-
-  reset.onclick = function(){
-    clearInterval(interval);
-    sec = 0;
-    mili = 0;
-    addsec.innerHTML="00";
-    addmili.innerHTML = "00";
-  }
-
-  function starttimer(){
-    mili++;
-
-    if(mili<10){
-      addmili.innerHTML="0"+mili
-
-    }
-
-    else{
-      addmili.innerHTML=mili
-    }
-
-    if(mili>999){
-      sec++;
-      addsec.innerHTML = sec<10 ? "0"+sec : sec;
-      mili = 0;
-      addmili.innerHTML = "00";
-
-    }
-  }
-  
-
-
-
-
-
+function updateDisplay() {
+  secDisplay.textContent = sec < 10 ? "0" + sec : sec;
+  miliDisplay.textContent = mili < 10 ? "0" + mili : mili;
 }
+
+function startTimer() {
+  if (interval) return; // Prevent multiple intervals
+  interval = setInterval(() => {
+    mili++;
+    if (mili > 99) {
+      mili = 0;
+      sec++;
+    }
+    updateDisplay();
+  }, 10);
+}
+
+function stopTimer() {
+  clearInterval(interval);
+  interval = null;
+
+  
+  const timestamp = `${sec < 10 ? "0" + sec : sec} : ${mili < 10 ? "0" + mili : mili}`;
+  const li = document.createElement("li");
+  li.textContent = "Paused at " + timestamp;
+  pauseHistoryList.appendChild(li);
+}
+
+function resetTimer() {
+  clearInterval(interval);
+  interval = null;
+  sec = 0;
+  mili = 0;
+  updateDisplay();
+  pauseHistoryList.innerHTML = ""; // Clear pause history
+}
+
+ 
+startBtn.addEventListener("click", startTimer);
+stopBtn.addEventListener("click", stopTimer);
+resetBtn.addEventListener("click", resetTimer);
+ 
+updateDisplay();
