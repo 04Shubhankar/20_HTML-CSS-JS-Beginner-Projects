@@ -88,3 +88,39 @@ button.reset{
 .start:hover , .stop:hover , .reset:hover{
     animation: bounce 0.5s;
 }
+
+#pauseHistoryContainer {
+  margin: 240px;
+  margin-right: 105px;
+  position: relative;
+  top: 20px;
+  right: 20px;
+  background: #022e9c;
+  padding: 10px 15px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px white;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#pauseHistoryContainer h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+#pauseHistory {
+  list-style: none;
+  padding: 2px;
+  margin: 2px;
+  font-family: monospace;
+}
+.x{
+    color: red;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    margin: 5px 5px; 
+    scroll-behavior: smooth;
+
+    
+}
