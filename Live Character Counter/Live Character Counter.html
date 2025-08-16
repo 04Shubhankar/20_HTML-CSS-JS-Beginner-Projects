@@ -8,7 +8,9 @@
 </head>
 <body>
     <div class="container">
-        <h2>Live Character Counter</h2>
+      <button onclick="toggleTheme()" id="themeBtn" class="theme-toggle" title="Toggle Theme">🌙</button>
+         <h2>Live Character Counter</h2>
+
         <textarea 
             name="textarea" 
             id="textarea"
@@ -18,21 +20,28 @@
             onkeyup="countingcharactor()">     
         </textarea>
 
-        <p>Total Character Typed including space : 
-            <span class="Counter">
-                0
-            </span>
+        <div class="button-group">
+            <button onclick="copyText()">Copy</button>
+            <button onclick="clearText()">Clear</button>
+        </div>
+
+        <p>Total Characters (including space): 
+            <span class="Counter">0</span>
         </p>
 
-        <p>Total Character Typed Without  including space : 
-            <span class="wospace">
-                0
-            </span>
+        <p>Total Characters (excluding space): 
+            <span class="wospace">0</span>
+        </p>
+
+        <p>Total Words: 
+            <span class="wordcount">0</span>
+        </p>
+
+        <p>Typing Speed (Words per Minute): 
+            <span class="wpm">0</span>
         </p>
     </div>
 
-
     <script src="Live Character Counter.js"></script>
-    
 </body>
 </html>
