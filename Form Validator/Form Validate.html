@@ -1,44 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>From Validator</title>
-     <link rel="stylesheet" href="Form Validate.css">
-</head>
-<body>
-     <div class="container">
-          <div class="header">
-               <h1>Create Account</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validator</title>
+    <link rel="stylesheet" href="Form Validate.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Form Validator</h1>
+      </div>
+      <form id="form" class="form" aria-labelledby="form-title" novalidate>
+        <fieldset>
+          <legend id="form-title">Create Account</legend>
+
+          <div class="controlform">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              placeholder="Name"
+              id="username"
+              aria-describedby="username-error"
+              aria-invalid="false"
+              required
+            />
+            <small class="error" id="username-error" aria-live="polite"></small>
           </div>
-          <form action="" id="form" class="form">
-               <div class="controlform">
-                    <label for="username">Username</label>
-                    <input type="text" placeholder="Name" id="username">
-                    <small class="error"></small>
-               </div>
 
-               <div class="controlform">
-                    <label for="email">Email</label>
-                    <input type="email" placeholder="Email" id="email">
-                    <small class="error"></small>
-               </div>
+          <div class="controlform">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              placeholder="Email"
+              id="email"
+              aria-describedby="email-error"
+              aria-invalid="false"
+              required
+            />
+            <small class="error" id="email-error" aria-live="polite"></small>
+          </div>
 
+          <div class="controlform">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              placeholder="Password"
+              id="password"
+              aria-describedby="password-error"
+              aria-invalid="false"
+              required
+            />
+            <small class="error" id="password-error" aria-live="polite"></small>
+          </div>
 
-               <div class="controlform">
-                    <label for="password">password</label>
-                    <input type="password" placeholder="Password" id="password">
-                    <small class="error"></small>
-               </div>
+          <div class="controlform">
+            <label for="passwordcheck">Confirm Password</label>
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              id="passwordcheck"
+              aria-describedby="passwordcheck-error"
+              aria-invalid="false"
+              required
+            />
+            <small
+              class="error"
+              id="passwordcheck-error"
+              aria-live="polite"
+            ></small>
+          </div>
 
-               <div class="controlform">
-                    <label for="passwordcheck">password check</label>
-                    <input type="password" placeholder="PasswordCheck" id="passwordcheck">
-                    <small class="error"></small>
-               </div>
-               <button type="submit">Submit</button>
-          </form>
-     </div>
-     <script src="Form Validate.js"></script>
-</body>
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+    <script src="Form Validate.js"></script>
+  </body>
 </html>

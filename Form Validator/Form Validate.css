@@ -1,111 +1,107 @@
-*{
-    box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
 }
 
-body{
-    background: linear-gradient(to right,lightblue,lightgreen);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-
+body {
+  background: linear-gradient(to right, lightblue, lightgreen);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.container{
-    background: linear-gradient(to bottom,white,grey);
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
-    width: 400px;
-
+.container {
+  background: linear-gradient(to bottom, white, grey);
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  width: 400px;
 }
 
-.header{
-    border-bottom: 1px solid palegreen;
-    background-color: beige;
-    padding: 20px 40px;
+.header {
+  border-bottom: 1px solid palegreen;
+  background-color: beige;
+  padding: 20px 40px;
 }
 
-.header h1{
-    margin: 0;
-
+.header h1 {
+  margin: 0;
 }
 
-form{
-    padding: 30px 40px;
+form {
+  padding: 30px 40px;
 }
 
-.controlform{
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    position: relative;
-    transition: all 0.3s ease;
-
+.controlform {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
-.controlform:hover{
-    transform: translateY(-5px);
-
+.controlform:hover {
+  transform: translateY(-5px);
 }
 
-.controlform label{
-    display: inline-block;
-    margin-bottom: 5px;
+.controlform label {
+  display: inline-block;
+  margin-bottom: 5px;
 }
 
-.controlform input{
-    border: 2px solid white;
-    border-radius: 4px;
-    display: block;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 14px;
-    padding: 10px;
-    width: 100%;
-    transition: border-colour 0.3s ease;
+.controlform input {
+  border: 2px solid white;
+  border-radius: 4px;
+  display: block;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+  transition: border-color 0.3s ease;
 }
 
-.controlform input:focus{
-    outline: 0cm;
-    border-color: blue;
-
+.controlform input:focus {
+  outline: 2px solid lightblue;
+  border-color: blue;
+}
+.controlform input:focus-visible {
+  outline: 2px dashed #007bff;
+}
+.controlform.fail input {
+  border-color: red;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.controlform.success input {
+  border-color: greenyellow;
 }
 
-.controlform.success input{
-    border-color: greenyellow;
-
+.controlform small {
+  font-size: 12px;
+  position: absolute;
+  line-height: 1.4;
+  bottom: 0%;
+  left: 0%;
+  visibility: hidden;
+  transition: 0.3s ease;
 }
 
-.controlform small{
-    color: red;
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
-    visibility: hidden;
-    transition: 0.3s ease;
+.form button {
+  background-color: aqua;
+  border: 2px solid blue;
+  border-radius: 4px;
+  color: blue;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.controlform.fail{
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.form button{
-    background-color: aqua;
-    border: 2px solid blue;
-    border-radius: 4px;
-    color: blue;
-    display: block;
-    font-size: 16px;
-    padding: 10px;
-    margin-top: 20px;
-    width: 100%;
-    cursor: pointer;
-    transition: background-colour 0.3s ease;
-}
-
-.form button:hover{
-    background-color: blueviolet;
+.form button:hover {
+  background-color: rgb(14, 128, 222);
 }
