@@ -36,6 +36,12 @@ This repository proudly includes contributions by **Anupma Mishra**, who has:
 Her contributions aim to complement the original work by @05hubhankar20, whose beginner-friendly project structure and thoughtful design laid the foundation for meaningful enhancements.
 
 These updates reflect a shared focus on **clean code**, **user experience**, and **accessibility** — making the project more impactful for learners.
+## Milestone: Accessibility Polish (3 PRs)
+
+- ✅ [Counter App – Semantic & UI Polish](https://github.com/04Shubhankar/20_HTML-CSS-JS-Beginner-Projects/pull/3)
+- ✅ [VIBGYOR Color App – Logic & Styling](https://github.com/04Shubhankar/20_HTML-CSS-JS-Beginner-Projects/pull/4)
+- ✅ [Form Validator – Accessibility Enhancements](https://github.com/04Shubhankar/20_HTML-CSS-JS-Beginner-Projects/pull/5)
+
 
 
 ---
