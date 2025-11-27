@@ -1,75 +1,52 @@
-body{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background: linear-gradient(top-right,green blue) ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #e0eafc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+.container {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
 }
 
-.card{
-    background: linear-gradient(to bottom, red black);
-    border-radius: 10px;
-    padding: 30px;
-    text-align: center;
-    width: 300px;
-
+h1 {
+  margin-bottom: 0.5rem;
+  color: #333;
 }
 
-.heading, .counter-machine{
-    color: white;
-    margin: 0;
-
+.description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1.5rem;
 }
 
-.counter{
-    background-color: blueviolet;
-    border-radius: 50%;
-    padding: auto;
-    margin: auto;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: large;
-    border: 4px solid transparent;
-    transition: border-colour 1s;
+.counter-box {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #007bff;
 }
 
-.btn-grp{
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
+.buttons button {
+  margin: 0 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.btn-counter{
-    border-color: bisque;
-    border: none;
-    border-radius: 5px;
-    color: black;
-    cursor: pointer;
-    padding: 10px 10px;
-    transition: background-colour 1s;
-}
-
-.btn-counter:hover{
-    background-color: pink;
-}
-
-.positive{
-    border-color: green;
-}
-
-.negative{
-    border-color: red;
+.buttons button:hover {
+  background-color: #0056b3;
 }

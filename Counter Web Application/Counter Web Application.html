@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter Web Application</title>
-    <link rel="stylesheet" href="Counter Web Application.css">
-</head>
-<body>
-    
-    <div class="container">
-        <div class="card">
-            <h1 class="Heading">Counter App</h1>
-            <div class="counter">
-                <h1 class="CounterMachine">0</h1>
-            </div>
-            <div class="btn-grp">
-                <button class="btn-counter desc-btn">Decrese</button>
-                <button class="btn-counter insc-btn">Increase</button>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Counter App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Counter Web Application.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Counter Web Application</h1>
+      <p class="description">
+        Click the buttons to increase or decrease the count.
+      </p>
+      <div class="counter-box">
+        <span id="count">0</span>
+        <div class="buttons">
+          <button onclick="decrement()">−</button>
+          <button onclick="reset()">Reset</button>
+          <button onclick="increment()">+</button>
         </div>
-    </div>
+      </div>
+    </main>
     <script src="Counter Web Application.js"></script>
-</body>
+  </body>
 </html>
